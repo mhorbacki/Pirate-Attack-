@@ -15,7 +15,9 @@ class GameScene: SKScene {
     var spaceship: SKSpriteNode!
     
     var scoreCount = 0
-  //  var scoreLabel = SKLabelNode!
+    //var scoreLabel = SKLabelNode!
+    
+
     
     let motionManager = CMMotionManager()
 
@@ -42,9 +44,9 @@ class GameScene: SKScene {
         
         
         
-        //scoreLabel = SKLabelNode (text: "score 0")
-        //scoreLabel.position = CGPoint (x: 80, y: 700)
-       // addChild(scoreLabel)
+      //  scoreLabel = SKLabelNode (text: "score 0")
+     //   scoreLabel.position = CGPoint (x: 80, y: 700)
+     //  addChild(scoreLabel)
         
     
         let distance = 20
@@ -107,7 +109,7 @@ class GameScene: SKScene {
             let num = Int.random(min: 1, max: 5)
             
             item = SKSpriteNode(imageNamed: "Fruit \(num)")
-            item!.name = "Fruit";
+            item!.name = "Fruit 1";
             item!.setScale(0.7)
             item!.physicsBody = SKPhysicsBody(circleOfRadius: item!.size.height / 2)
         }
