@@ -1,10 +1,4 @@
-//
-//  GameScene.swift
-//  Pirate Attack!
-//
-//  Created by Michael Horbacki (i7671439) on 14/03/2017.
-//  Copyright © 2017 Michael Horbacki (i7671439). All rights reserved.
-//
+//Hello from Banks
 
 import SpriteKit
 import GameplayKit
