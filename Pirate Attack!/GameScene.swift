@@ -4,7 +4,10 @@ import SpriteKit
 import GameplayKit
 import CoreMotion
 
+
 class GameScene: SKScene {
+        
+    
     
     var spaceship: SKSpriteNode!
     var Bomb: SKSpriteNode!
@@ -12,7 +15,7 @@ class GameScene: SKScene {
     
     
     var scoreCount = 0
-    //var scoreLabel = SKLabelNode!
+   
     
 
     
@@ -41,10 +44,7 @@ class GameScene: SKScene {
         
         
         
-      //  scoreLabel = SKLabelNode (text: "score 0")
-     //   scoreLabel.position = CGPoint (x: 80, y: 700)
-     //  addChild(scoreLabel)
-        
+
     
         let distance = 20
         let time = 10
@@ -83,6 +83,11 @@ class GameScene: SKScene {
         }
         
         addChild(spawnItems())
+        
+        
+       
+        
+            
         
     }
 
