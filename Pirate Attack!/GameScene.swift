@@ -13,6 +13,9 @@ import CoreMotion
 class GameScene: SKScene {
     
     var spaceship: SKSpriteNode!
+    var Bomb: SKSpriteNode!
+    var Fruit: SKSpriteNode!
+    
     
     var scoreCount = 0
     //var scoreLabel = SKLabelNode!
@@ -85,6 +88,8 @@ class GameScene: SKScene {
             spaceship.position.y += acc.dy
         }
         
+        addChild(spawnItems())
+        
     }
 
     
@@ -119,8 +124,8 @@ class GameScene: SKScene {
         item!.zPosition = 3
         item!.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         
-        item!.position.x = randomBetweenNumbers(firstNum: minX, secondNum: maxX)
-        item!.position.y = 500
+        item!.position.x = CGFloat.random(min: 10, max: frame.size.width - 10)
+        item!.position.y = frame.height
         
         return item!
     }
