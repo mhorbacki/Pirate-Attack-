@@ -102,25 +102,25 @@ class GameScene: SKScene {
             item = SKSpriteNode(imageNamed: "Bomb")
             item!.name = "Bomb"
             item!.setScale(0.6)
-            item!.physicsBody = SKPhysicsBody(circleOfRadius: item!.size.height / 2);
+            item!.physicsBody = SKPhysicsBody(circleOfRadius: item!.size.height / 2)
         } else {
             let num = Int.random(min: 1, max: 5)
             
-            item = SKSpriteNode(imageNamed: "Fruit \(num)");
+            item = SKSpriteNode(imageNamed: "Fruit \(num)")
             item!.name = "Fruit";
-            item!.setScale(0.7);
-            item!.physicsBody = SKPhysicsBody(circleOfRadius: item!.size.height / 2);
+            item!.setScale(0.7)
+            item!.physicsBody = SKPhysicsBody(circleOfRadius: item!.size.height / 2)
         }
         
-        item!.physicsBody?.categoryBitMask = ColliderType.FRUIT_AND_BOMB;
+      //  item!.physicsBody?.categoryBitMask = ColliderType.FRUIT_AND_BOMB
         
-        item!.zPosition = 3;
-        item!.anchorPoint = CGPoint(x: 0.5, y: 0.5);
+        item!.zPosition = 3
+        item!.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         
-        item!.position.x = randomBetweenNumbers(firstNum: minX, secondNum: maxX);
-        item!.position.y = 500;
+        item!.position.x = randomBetweenNumbers(firstNum: minX, secondNum: maxX)
+        item!.position.y = 500
         
-        return item!;
+        return item!
     }
     
     
