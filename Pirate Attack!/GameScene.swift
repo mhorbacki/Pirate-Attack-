@@ -52,6 +52,12 @@ class GameScene: SKScene {
         
         NSLog("%d", result)
         
+        let wait = SKAction.wait(forDuration: 1.5)
+        let addAction = SKAction.run {
+            self.addChild(self.spawnItems())
+        }
+        let seq = SKAction.sequence([wait, addAction])
+        run(SKAction.repeatForever(seq))
         
     }
     
@@ -82,7 +88,7 @@ class GameScene: SKScene {
             spaceship.position.y += acc.dy
         }
         
-        addChild(spawnItems())
+    
         
         
        
@@ -104,17 +110,17 @@ class GameScene: SKScene {
     func spawnItems() -> SKSpriteNode {
         let item: SKSpriteNode?
         
-        if  Int.random(min: 0, max: 10) >= 6 {
+        if  Int.random(min: 1, max: 4) >= 5 {
             item = SKSpriteNode(imageNamed: "Bomb")
             item!.name = "Bomb"
             item!.setScale(0.6)
             item!.physicsBody = SKPhysicsBody(circleOfRadius: item!.size.height / 2)
         } else {
-            let num = Int.random(min: 1, max: 5)
+            let num = Int.random(min: 1, max: 10)
             
             item = SKSpriteNode(imageNamed: "Fruit \(num)")
             item!.name = "Fruit 1";
-            item!.setScale(0.7)
+            item!.setScale(0.5)
             item!.physicsBody = SKPhysicsBody(circleOfRadius: item!.size.height / 2)
         }
         
