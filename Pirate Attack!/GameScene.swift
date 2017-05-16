@@ -27,7 +27,7 @@ class GameScene: SKScene {
     override func didMove(to view: SKView) {
         print("loaded")
         motionManager.startAccelerometerUpdates()
-        spaceship = SKSpriteNode(imageNamed: "Spaceship")
+        spaceship = SKSpriteNode(imageNamed: "pirate ship 1")
         spaceship.position = CGPoint(x: frame.size.width/2, y: 100)
         spaceship.setScale(0.3)
         self.addChild(spaceship)
@@ -137,6 +137,14 @@ class GameScene: SKScene {
     
     
 
+     func viewDidLoad() {
+        
+    let backgroundImage = UIImageView(frame: UIScreen.mainScreen().bounds)
+    backgroundImage.image = UIImage(named: "sea-water")
+    self.view.insertSubview(backgroundImage, atIndex: 0)
+        
+    }
+    
     
     
     
